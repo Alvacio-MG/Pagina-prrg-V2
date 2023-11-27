@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color01: #4353ff;
+  --color02: #232ead;
+  --color03: #3498db;
+  --color04: #000000;
+  --color05: #fff;
+  --color06: #00000071;
+  --color07: #eeeded;/* probar también con #eeeded */
+
+}
+
+body {
+  padding: 80px 5vw 0px;
+  min-width: 100vh;
+  /* márgenes de la página */
+
+}
+
+/* base de la barra de navegacion */
+header {
+  background-color: var(--color07);
+  height: 60px;
+  width: 100vw;
+  max-width: 100vw;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 200px;
+  padding-right: 200px;
+  top: 0;
+  left: 0;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px 0 var(--color06);
+}
+
+/* contenido de la barra de navegación */
+.logo {
+  float: left;
+}
+
+.logo img {
+  max-width: 20px;
+  max-height: 20px;
+
+}
+
+nav {
+  float: left;
+}
+
+/* lista de lavegación */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.elNav {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.elNav a {
+  color: var(--color01);
+  text-decoration: none;
+  padding: 5px;
+}
+
+.elNav a:hover {
+  transition: 1ms;
+  color: var(--color02);
+}
+
+/* botón de navegación */
+.logB {
+  float: right;
+  border: 1px solid var(--color04);
+}
+
+.logBut {
+  color: var(--color02);
+  text-decoration: none;
+
+}
+
+/* inicio de la estilización del  contenido principal */
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* conenedor de los items */
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 90px;
+  column-gap: 1vw;
+  grid-auto-columns: minmax(100px, 340px);
+  grid-auto-rows: minmax(100px, 340px);
+  min-height: 800px;
+  width: 100%;
+
+
+}
+
+/* cajas de items */
+.cajas {
+  width: 100%;
+  height: 370px;
+  max-width: 300px;
+  max-height: 400px;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid var(--color04);
+  border-radius: 4px;
+  background-color: var(--color03);
+  color: var(--color05);
+  text-align: center;
+  scrollbar-gutter: both;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  text-decoration: none;
+}
+
+/* asignaciónes de cajas */
+.caja1 {
+  grid-area: 1 / 1;
+}
+
+.caja2 {
+  grid-area: 1 / 2;
+}
+
+.caja3 {
+  grid-area: 1 / 3;
+}
+
+.caja4 {
+  grid-area: 2 / 1;
+}
+
+.caja5 {
+  grid-area: 2 / 2;
+}
+
+.caja6 {
+  grid-area: 2 / 3;
+}
+.ButCon{
+  margin: 0px auto;
+  max-width:fit-content
+}
+.Cimg {
+  max-width: 280px;
+  margin: 0px auto;
+
+}
+
+.Cimg img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.price {
+  font-size: 30px;
+}
+
+.Ctext {
+  max-width: 90%;
+  margin: auto;
+  text-align: justify;
+}
+
+/* boton de confirmar compra */
+.But01 {
+  margin: 0px auto;
+  grid-area: 3/ 2;
+}
+
+.someBut {
+  background-color: var(--color01);
+  color: var(--color05);
+  padding: 10px 20px;
+}
+/* psoicionamiento debotones */
+/* .But01P{
+  position:relative;
+  grid-area: 1 / 1;
+}
+.ButAC{
+    top: 214px;
+  right: 94px;
+}
+.ButQC{
+  top: 200px;
+left: 91px;
+} */
+/* inicio del footer */
+
+footer {
+  position: absolute;
+  left: 0px;
+  min-height: 200px;
+  min-width: 100vw;
+  background-color: var(--color04);
+  color: var(--color05);
+}
